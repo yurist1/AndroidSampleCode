@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.gbkim.gubonny.Common.HistoryBack;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.Common.HistoryBack;
+import com.example.yrchoi.yurist.R;
 
 import java.util.ArrayList;
 

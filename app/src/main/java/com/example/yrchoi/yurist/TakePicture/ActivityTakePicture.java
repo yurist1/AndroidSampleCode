@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.TakePicture;
+package com.example.yrchoi.yurist.TakePicture;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 /**
  * 참고 블로그

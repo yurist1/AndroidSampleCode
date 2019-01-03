@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.gbkim.gubonny.Adapter.Adapter_Clickable_VP;
+import com.example.yrchoi.yurist.Adapter.Adapter_Clickable_VP;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,10 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.Receiver.NetworkUtil;
+import com.example.yrchoi.yurist.Receiver.NetworkUtil;
 
 public class NetworkReceiverActivity extends AppCompatActivity {
 

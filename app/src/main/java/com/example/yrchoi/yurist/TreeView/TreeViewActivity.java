@@ -1,9 +1,9 @@
-package com.example.gbkim.gubonny.TreeView;
+package com.example.yrchoi.yurist.TreeView;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 import java.util.ArrayList;
 import java.util.List;

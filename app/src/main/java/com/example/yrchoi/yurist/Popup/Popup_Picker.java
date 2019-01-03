@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Popup;
+package com.example.yrchoi.yurist.Popup;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,8 +15,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.example.gbkim.gubonny.Picker.NumberPickerActivity;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.Picker.NumberPickerActivity;
+import com.example.yrchoi.yurist.R;
 
 /**
  * Created by neozen on 2018-04-26.

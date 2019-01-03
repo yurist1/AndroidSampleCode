@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Adapter;
+package com.example.yrchoi.yurist.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.FilterActivity;
-import com.example.gbkim.gubonny.R;
-import com.example.gbkim.gubonny.VO.Info_Recent;
+import com.example.yrchoi.yurist.FilterActivity;
+import com.example.yrchoi.yurist.R;
+import com.example.yrchoi.yurist.VO.Info_Recent;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.TreeView.fragment;
+package com.example.yrchoi.yurist.TreeView.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.R;
-import com.example.gbkim.gubonny.TreeView.holder.ArrowExpandSelectableHeaderHolder;
-import com.example.gbkim.gubonny.TreeView.holder.IconTreeItemHolder;
+import com.example.yrchoi.yurist.R;
+import com.example.yrchoi.yurist.TreeView.holder.ArrowExpandSelectableHeaderHolder;
+import com.example.yrchoi.yurist.TreeView.holder.IconTreeItemHolder;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Common;
+package com.example.yrchoi.yurist.Common;
 
 /**
  * Created by gbkim on 2018-03-06.

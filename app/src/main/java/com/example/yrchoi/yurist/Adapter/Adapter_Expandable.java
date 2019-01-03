@@ -1,15 +1,15 @@
-package com.example.gbkim.gubonny.Adapter;
+package com.example.yrchoi.yurist.Adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.gbkim.gubonny.VO.VO_MobileOS;
-import com.example.gbkim.gubonny.VO.VO_Phone;
-import com.example.gbkim.gubonny.R;
-import com.example.gbkim.gubonny.ViewHolder.OSViewHolder;
-import com.example.gbkim.gubonny.ViewHolder.PhoneViewHolder;
+import com.example.yrchoi.yurist.VO.VO_MobileOS;
+import com.example.yrchoi.yurist.VO.VO_Phone;
+import com.example.yrchoi.yurist.R;
+import com.example.yrchoi.yurist.ViewHolder.OSViewHolder;
+import com.example.yrchoi.yurist.ViewHolder.PhoneViewHolder;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 

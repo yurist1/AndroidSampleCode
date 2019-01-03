@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.VO;
+package com.example.yrchoi.yurist.VO;
 
 /**
  * Created by gbkim on 2018-01-16.

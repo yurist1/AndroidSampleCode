@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.content.Context;
 import android.content.SharedPreferences;

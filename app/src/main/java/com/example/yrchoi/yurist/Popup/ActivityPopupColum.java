@@ -1,9 +1,9 @@
-package com.example.gbkim.gubonny.Popup;
+package com.example.yrchoi.yurist.Popup;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class ActivityPopupColum extends AppCompatActivity {
 

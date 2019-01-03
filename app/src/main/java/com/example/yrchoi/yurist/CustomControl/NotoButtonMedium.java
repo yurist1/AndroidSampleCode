@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.CustomControl;
+package com.example.yrchoi.yurist.CustomControl;
 
 import android.content.Context;
 import android.graphics.Typeface;

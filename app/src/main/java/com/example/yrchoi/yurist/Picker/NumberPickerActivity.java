@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Picker;
+package com.example.yrchoi.yurist.Picker;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -17,8 +17,8 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.example.gbkim.gubonny.Popup.Popup_Picker;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.Popup.Popup_Picker;
+import com.example.yrchoi.yurist.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class NoServerNotifiActivity extends AppCompatActivity {
 

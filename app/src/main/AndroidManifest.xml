@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gbkim.gubonny">
+    package="com.example.yrchoi.yurist">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 디바이스가 활성화 되지 않았을 때(켜져 있지 않았을 때) 화면을 활성화 시켜주는 옵 -->

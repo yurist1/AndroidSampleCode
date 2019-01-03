@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Adapter;
+package com.example.yrchoi.yurist.Adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,14 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.Listener.Listener_Change_Bg;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.Listener.Listener_Change_Bg;
+import com.example.yrchoi.yurist.R;
 
 import java.util.List;
 
-/**
- * Created by gbkim on 2018-01-23.
- */
+
 
 public class Adapter_Change_Bg extends RecyclerView.Adapter<Adapter_Change_Bg.ViewHolder> {
 

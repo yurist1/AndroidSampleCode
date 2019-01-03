@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.gbkim.gubonny.Fragment.Fragment1;
-import com.example.gbkim.gubonny.Fragment.Fragment2;
+import com.example.yrchoi.yurist.Fragment.Fragment1;
+import com.example.yrchoi.yurist.Fragment.Fragment2;
 
 public class FragmentActivity extends AppCompatActivity implements View.OnClickListener {
 

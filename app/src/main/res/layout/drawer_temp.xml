@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- 사용자 명 -->
-        <com.example.gbkim.gubonny.CustomControl.NotoTextViewBold
+        <com.example.yrchoi.yurist.CustomControl.NotoTextViewBold
             android:id="@+id/lb_menu_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- 사용자 소속 -->
-        <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+        <com.example.yrchoi.yurist.CustomControl.NotoTextViewRegular
             android:id="@+id/lb_menu_user_dept"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 android:src="@drawable/button_menu_settings" />
 
             <!-- 텍스트 -->
-            <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+            <com.example.yrchoi.yurist.CustomControl.NotoTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10sp"
@@ -143,7 +143,7 @@
                 android:src="@drawable/button_menu_logout" />
 
             <!-- 텍스트 -->
-            <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+            <com.example.yrchoi.yurist.CustomControl.NotoTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingEnd="10sp"

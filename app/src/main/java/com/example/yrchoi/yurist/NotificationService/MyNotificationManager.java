@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -10,7 +10,7 @@ import android.net.Uri;
 import android.os.PowerManager;
 import android.support.v4.app.NotificationCompat;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.SplashImage;
+package com.example.yrchoi.yurist.SplashImage;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.DrawableImageViewTarget;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class SplashActivity extends AppCompatActivity {
 

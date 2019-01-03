@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Interface;
+package com.example.yrchoi.yurist.Interface;
 
 import android.support.v7.widget.RecyclerView;
 

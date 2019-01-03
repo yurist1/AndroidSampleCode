@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import com.example.gbkim.gubonny.Adapter.Adapter_Filter;
-import com.example.gbkim.gubonny.VO.Info_Recent;
+import com.example.yrchoi.yurist.Adapter.Adapter_Filter;
+import com.example.yrchoi.yurist.VO.Info_Recent;
 
 import java.util.ArrayList;
 import java.util.List;

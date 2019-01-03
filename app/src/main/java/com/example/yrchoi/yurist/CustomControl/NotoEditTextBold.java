@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.CustomControl;
+package com.example.yrchoi.yurist.CustomControl;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class NotoEditTextBold extends AppCompatEditText implements View.OnTouchListener, View.OnFocusChangeListener {
 

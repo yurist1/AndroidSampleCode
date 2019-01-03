@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Receiver;
+package com.example.yrchoi.yurist.Receiver;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

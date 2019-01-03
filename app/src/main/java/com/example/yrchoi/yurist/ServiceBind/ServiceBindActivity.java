@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.ServiceBind;
+package com.example.yrchoi.yurist.ServiceBind;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class ServiceBindActivity extends AppCompatActivity implements View.OnClickListener {
 

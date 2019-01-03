@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 
 public class FragmentMain extends Fragment implements CompoundButton.OnCheckedChangeListener {

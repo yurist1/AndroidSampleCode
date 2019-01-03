@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.gbkim.gubonny.Adapter.Adapter_MultiViewType;
-import com.example.gbkim.gubonny.VO.VO_Model;
+import com.example.yrchoi.yurist.Adapter.Adapter_MultiViewType;
+import com.example.yrchoi.yurist.VO.VO_Model;
 
 import java.util.ArrayList;
 

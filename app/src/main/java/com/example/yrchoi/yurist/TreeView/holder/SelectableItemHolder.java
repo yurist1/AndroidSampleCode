@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.TreeView.holder;
+package com.example.yrchoi.yurist.TreeView.holder;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 import com.unnamed.b.atv.model.TreeNode;
 
 /**

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Fragment;
+package com.example.yrchoi.yurist.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 /**
  * Created by gbkim on 2018-01-02.

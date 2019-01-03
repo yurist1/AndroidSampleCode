@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Listener;
+package com.example.yrchoi.yurist.Listener;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

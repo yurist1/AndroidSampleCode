@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.Adapter.Adapter_Change_Bg;
-import com.example.gbkim.gubonny.Listener.Listener_Change_Bg;
+import com.example.yrchoi.yurist.Adapter.Adapter_Change_Bg;
+import com.example.yrchoi.yurist.Listener.Listener_Change_Bg;
 
 import java.util.ArrayList;
 

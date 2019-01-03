@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.GridView;
+package com.example.yrchoi.yurist.GridView;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 public class ActivityGridView extends AppCompatActivity {
 

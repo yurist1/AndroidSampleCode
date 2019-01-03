@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gbkim.gubonny.ListActivity">
+    tools:context="com.example.yrchoi.yurist.ListActivity">
 
     <!--android:stackFromBottom="true"  Message 밑에서 부터 쌓이는 속성-->
     <ListView

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,15 +8,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.gbkim.gubonny.GridView.ActivityGridView;
-import com.example.gbkim.gubonny.NotificationService.FCMActivity;
-import com.example.gbkim.gubonny.NotificationService.NoServerNotifiActivity;
-import com.example.gbkim.gubonny.Picker.NumberPickerActivity;
-import com.example.gbkim.gubonny.ServiceBind.ServiceBindActivity;
-import com.example.gbkim.gubonny.SplashImage.SplashActivity;
-import com.example.gbkim.gubonny.TakePicture.ActivityTakePicture;
-import com.example.gbkim.gubonny.TreeView.TreeView2Activity;
-import com.example.gbkim.gubonny.TreeView.TreeViewActivity;
+import com.example.yrchoi.yurist.GridView.ActivityGridView;
+import com.example.yrchoi.yurist.NotificationService.FCMActivity;
+import com.example.yrchoi.yurist.NotificationService.NoServerNotifiActivity;
+import com.example.yrchoi.yurist.Picker.NumberPickerActivity;
+import com.example.yrchoi.yurist.ServiceBind.ServiceBindActivity;
+import com.example.yrchoi.yurist.SplashImage.SplashActivity;
+import com.example.yrchoi.yurist.TakePicture.ActivityTakePicture;
+import com.example.yrchoi.yurist.TreeView.TreeView2Activity;
+import com.example.yrchoi.yurist.TreeView.TreeViewActivity;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

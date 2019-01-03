@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Adapter;
+package com.example.yrchoi.yurist.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.NotificationService;
+package com.example.yrchoi.yurist.NotificationService;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,10 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 
-import static com.example.gbkim.gubonny.util.KeyboardUtils.showKeyboard;
-import static com.example.gbkim.gubonny.util.Utils.getSHA256String;
+import static com.example.yrchoi.yurist.util.KeyboardUtils.showKeyboard;
+import static com.example.yrchoi.yurist.util.Utils.getSHA256String;
 
 /**
  * Created by neozen on 2018-04-04.

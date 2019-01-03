@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.VO;
+package com.example.yrchoi.yurist.VO;
 
 import android.annotation.SuppressLint;
 

@@ -1,12 +1,12 @@
-package com.example.gbkim.gubonny.Picker;
+package com.example.yrchoi.yurist.Picker;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.gbkim.gubonny.Popup.Popup_Picker;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.Popup.Popup_Picker;
+import com.example.yrchoi.yurist.R;
 
 public class ActivityCustomPicker extends AppCompatActivity implements View.OnClickListener {
 

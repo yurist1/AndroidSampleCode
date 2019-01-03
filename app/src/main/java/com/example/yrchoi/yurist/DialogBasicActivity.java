@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny;
+package com.example.yrchoi.yurist;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;

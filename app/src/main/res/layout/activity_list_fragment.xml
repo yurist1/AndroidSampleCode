@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gbkim.gubonny.ListFragmentActivity">
+    tools:context="com.example.yrchoi.yurist.ListFragmentActivity">
 
     <fragment
         android:id="@+id/listfragment"
-        android:name="com.example.gbkim.gubonny.Fragment.CustomListFragment"
+        android:name="com.example.yrchoi.yurist.Fragment.CustomListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_listview" />

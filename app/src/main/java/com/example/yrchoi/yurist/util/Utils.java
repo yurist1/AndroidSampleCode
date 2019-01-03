@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.util;
+package com.example.yrchoi.yurist.util;
 
 import java.security.MessageDigest;
 

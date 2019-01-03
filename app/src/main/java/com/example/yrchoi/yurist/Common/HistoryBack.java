@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Common;
+package com.example.yrchoi.yurist.Common;
 
 import android.support.v4.app.Fragment;
 

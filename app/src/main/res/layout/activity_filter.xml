@@ -5,7 +5,7 @@
     android:id="@+id/rl_filter"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gbkim.gubonny.FilterActivity">
+    tools:context="com.example.yrchoi.yurist.FilterActivity">
 
     <EditText
         android:id="@+id/et_filter"

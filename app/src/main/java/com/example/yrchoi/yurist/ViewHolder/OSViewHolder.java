@@ -1,9 +1,9 @@
-package com.example.gbkim.gubonny.ViewHolder;
+package com.example.yrchoi.yurist.ViewHolder;
 
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.R;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import com.thoughtbot.expandablerecyclerview.viewholders.GroupViewHolder;
 

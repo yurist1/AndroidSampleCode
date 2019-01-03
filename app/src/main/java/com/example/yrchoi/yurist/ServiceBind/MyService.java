@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.ServiceBind;
+package com.example.yrchoi.yurist.ServiceBind;
 
 import android.app.Service;
 import android.content.Intent;

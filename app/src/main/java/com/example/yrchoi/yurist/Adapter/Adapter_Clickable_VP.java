@@ -1,4 +1,4 @@
-package com.example.gbkim.gubonny.Adapter;
+package com.example.yrchoi.yurist.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,9 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.example.gbkim.gubonny.MainActivity;
-import com.example.gbkim.gubonny.R;
+import com.example.yrchoi.yurist.MainActivity;
+import com.example.yrchoi.yurist.R;
 
 import java.util.ArrayList;
 

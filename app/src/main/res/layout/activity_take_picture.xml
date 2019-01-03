@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.gbkim.gubonny.TakePicture.ActivityTakePicture">
+    tools:context="com.example.yrchoi.yurist.TakePicture.ActivityTakePicture">
 
     <Button
         android:id="@+id/btn_take_picture"

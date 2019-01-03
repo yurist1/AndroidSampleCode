@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffa07a"
-    tools:context="com.example.gbkim.gubonny.DateCustomDialogActivity">
+    tools:context="com.example.yrchoi.yurist.DateCustomDialogActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
