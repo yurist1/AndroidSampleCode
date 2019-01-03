@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_padding">30dp</dimen>
+
+    <!-- 메뉴 -->
+    <dimen name="fontSize_15_sp">15dp</dimen>
+    <dimen name="fontSize_21_sp">21sp</dimen>
+    <dimen name="fontSize_15_dip">15dp</dimen>
+    <dimen name="fontSize_21_dip">21dp</dimen>
+
+</resources>

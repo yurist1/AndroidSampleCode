@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type">
+        <item>전체</item>
+        <item>입원</item>
+        <item>외래</item>
+        <item>수술</item>
+        <item>응급</item>
+    </string-array>
+</resources>

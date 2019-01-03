@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="divider">#727272</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorPink">#D2B6FF</color>
+    <color name="button_text_selector">#727272</color>
+    <drawable name="red_color">#FA032C</drawable>
+    <drawable name="blue_color">#061EF2</drawable>
+
+
+    <color name="colorBlue">#29a2fa</color>
+    <color name="colorBlue30">#36b2f9</color>
+    <color name="colorWhite20">#33000000</color>
+    <color name="colorSky">#30c2e8</color>
+    <color name="colorSky30">#3fd7ff</color>
+    <color name="colorHospitalization">#5579da</color>
+    <color name="colorVisitor">#29a2f9</color>
+    <color name="colorEmergency">#30c2e8</color>
+    <color name="colorOperation">#17b3a9</color>
+
+    <color name="colorDimgray">#696969</color>
+    <color name="colorGray">#666666</color>
+    <color name="colorDarkGray">#a9a9a9</color>
+    <color name="colorLightGray">#a0a0a0</color>
+    <color name="colorBrightGray">#c9c9c9</color>
+    <color name="colorTransparency">#00ff0000</color>
+    <color name="colorTimeLineDate">#ceeaff</color>
+    <color name="colorDarckBlack">#292c34</color>
+    <color name="colorLightBlack">#222222</color>
+    <color name="colorRed">#c00000</color>
+    <color name="colorBrightGreen">#0fc317</color>
+    <color name="colorDarkGreen">#336600</color>
+    <color name="colorOrange">#ff7d2e</color>
+    <color name="colorAzure">#f0ffff</color>
+
+    <!-- 메뉴 영역 color -->
+    <color name="colorMenuBackColor">#ffffff</color>
+    <color name="colorMenuBackColorButtonNormal">#ffffff</color>
+    <color name="colorMenuBackColorButtonPressed">#f5f5f5</color>
+    <color name="colorMenuUserAreaBackColor">#1fb6d6</color>
+    <color name="colorMenuUserAreaTextUserName">#ffffff</color>
+    <color name="colorMenuUserAreaTextUserDept">#ffffff</color>
+    <color name="colorMenuContentsAreaButtonText">#000000</color>
+    <color name="colorMenuContentsAreaButtonTextDisabled">#33000000</color>
+    <color name="colorMenuBottomAreaSplitter">#e0e0e0</color>
+    <color name="colorMenuBottomAreaBackColor">#ffffff</color>
+    <color name="colorMenuBottomAreaButtonText">#000000</color>
+
+    <color name="text_lgray">#808080</color>
+    <color name="text_gray">#323232</color>
+
+
+
+</resources>

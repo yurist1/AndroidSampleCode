@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.example.gbkim.gubonny.Picker.NumberPickerActivity">
+
+    <Button
+        android:id="@+id/btn_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timepicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_picker_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="40dp"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/btn_picker"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_picker_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="44dp"
+        android:text="Time"
+        app:layout_constraintBottom_toTopOf="@+id/btn_picker"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--<NumberPicker-->
+        <!--android:id="@+id/np_picker_year"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="108dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<NumberPicker-->
+        <!--android:id="@+id/np_picker_month"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/np_picker_year"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/np_picker_year"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/np_picker_year" />-->
+
+    <!--<NumberPicker-->
+        <!--android:id="@+id/np_picker_day"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/np_picker_month"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/np_picker_month"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/np_picker_month" />-->
+
+    <!--<NumberPicker-->
+        <!--android:id="@+id/np_picker_hour"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/np_picker_year"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/np_picker_month" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView6"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginStart="40dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text=":"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/np_picker_hour"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/np_picker_hour"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/np_picker_hour"-->
+        <!--app:layout_constraintVertical_bias="0.484" />-->
+
+    <!--<NumberPicker-->
+        <!--android:id="@+id/np_picker_min"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="32dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/textView6"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/np_picker_day"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/textView6"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/textView6"-->
+        <!--app:layout_constraintVertical_bias="0.525" />-->
+
+</android.support.constraint.ConstraintLayout>

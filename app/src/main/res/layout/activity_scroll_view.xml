@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gbkim.gubonny.ScrollViewActivity">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="318dp">
+
+                <TextView
+                    android:id="@+id/tv_my_pt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/my_patient_label"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl_main_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_main_spinner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Spinner
+                        android:id="@+id/spin_main_type"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/type"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:paddingTop="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_main_graph"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="90"
+                    app:layout_constraintEnd_toStartOf="@id/cl_main_spinner"
+                    app:layout_constraintStart_toStartOf="@id/tv_my_pt"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_main_spinner">
+
+                    <TextView
+                        style="@style/WhiteTextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@color/colorHospitalization"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="@string/my_patient_hospitalization_cnt" />
+
+                    <TextView
+                        style="@style/WhiteTextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@color/colorVisitor"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="@string/my_patient_visitor_cnt" />
+
+
+                    <TextView
+                        style="@style/WhiteTextView16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@color/colorEmergency"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="3dp"
+                        android:text="@string/my_patient_emergency_cnt" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_hospitalization_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/my_patient_hospitalization_title"
+                    android:textColor="@color/colorHospitalization"
+                    app:layout_constraintStart_toStartOf="@+id/ll_main_graph"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_main_graph" />
+
+                <TextView
+                    android:id="@+id/tv_visitor_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:text="@string/my_patient_visitor_title"
+                    android:textColor="@color/colorVisitor"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_hospitalization_title"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_hospitalization_title" />
+
+                <TextView
+                    android:id="@+id/tv_emergency_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:text="@string/my_patient_emergency_title"
+                    android:textColor="@color/colorEmergency"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_visitor_title"
+                    app:layout_constraintStart_toEndOf="@+id/tv_visitor_title" />
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_patient_operation_cnt"
+                    android:textColor="@color/colorOperation"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@id/ll_main_graph"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ll_main_graph"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_main_spinner"
+                    app:layout_constraintTop_toTopOf="@+id/ll_main_graph" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="@string/my_patient_operation_title"
+                    android:textColor="@color/colorOperation"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tv_emergency_title"
+                    app:layout_constraintEnd_toEndOf="@+id/textView40"
+                    app:layout_constraintHorizontal_bias="0.34"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView40" />
+
+                <Button
+                    android:id="@+id/btn_my_patient_viewall"
+                    style="@style/ViewAll"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@color/colorWhite"
+                    android:text="@string/my_patient_btn_view_all"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_my_patient"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_my_patient_viewall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_hospitalization_title"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

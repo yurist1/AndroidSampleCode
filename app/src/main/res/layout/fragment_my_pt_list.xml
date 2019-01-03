@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/img_main_Category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:text="@string/default_category" />
+
+            <TextView
+                android:id="@+id/textBriefInfo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="73"
+                android:text="@string/default_brief_info" />
+
+            <ImageView
+                android:id="@+id/imageQuickMenu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@drawable/btn_quick_menu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="25"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/tv_main_ptName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="85"
+                android:padding="3dp"
+                android:text="@string/default_patient_name"
+                android:theme="@style/CardPatientNameStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/tv_main_ptNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="30"
+                android:text="@string/default_pat_reg_no"
+                android:theme="@style/CardPatientInfoStyle" />
+
+            <TextView
+                android:id="@+id/tv_main_ptGender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:text="@string/default_pat_gender"
+                android:theme="@style/CardPatientInfoStyle" />
+
+            <TextView
+                android:id="@+id/tv_main_ptAge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:text="@string/default_pat_age"
+                android:theme="@style/CardPatientInfoStyle" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/textPatLoc"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:text="@string/default_pat_loc"
+                android:theme="@style/CardPatientInfoStyle" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/tv_main_ptDisease"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:text="@string/default_pat_disease"
+                android:theme="@style/CardPatientInfoStyle" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#ffD3D3D3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="19"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/img_main_Allergy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:background="@drawable/img_icon_allergy"
+                android:padding="1dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Touch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:background="@drawable/img_icon_touch"
+                android:padding="1dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Blood"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:background="@drawable/img_icon_blood"
+                android:padding="1dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Air"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:background="@drawable/img_icon_air"
+                android:padding="1dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Splash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:background="@drawable/img_icon_splash"
+                android:padding="1dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="21"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Memo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:background="@drawable/img_icon_memo"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/img_main_Favor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="12"
+                android:background="@drawable/img_icon_favor_off"
+                android:padding="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

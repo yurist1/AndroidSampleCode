@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gbkim.gubonny.ServiceBind.ServiceBindActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service Start" />
+
+        <Button
+            android:id="@+id/bt_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service bind" />
+
+        <Button
+            android:id="@+id/bt_unbind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service unbind" />
+
+        <Button
+            android:id="@+id/bt_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service stop" />
+
+        <Button
+            android:id="@+id/bt_call_variable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서비스 멤버 변수 호출하기" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="서비스 멤버 변수 호출 : " />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gbkim.gubonny">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 디바이스가 활성화 되지 않았을 때(켜져 있지 않았을 때) 화면을 활성화 시켜주는 옵 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 카메라 제어 위한 권한 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!-- <service -->
+    <!-- android:name=".NotificationService" -->
+    <!-- android:enabled="true" /> -->
+    <!-- <receiver android:name=".NotificationReceiver" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"> <!-- Editext 초기실행시 자판 숨기기 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CardViewActivity" />
+        <activity android:name=".JavaLayoutActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".EventBasicActivity" />
+        <activity android:name=".MotionEventActivity" />
+        <activity android:name=".ReceiverActivity" />
+        <activity android:name=".NetworkReceiverActivity" />
+        <activity android:name=".DialogBasicActivity" />
+        <activity android:name=".CustomDialogActivity" />
+        <activity android:name=".SaveLoginActivity" />
+        <activity android:name=".SaveLoginNextActivity" />
+        <activity android:name=".LvItemSelectActivity" />
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".ListFragmentActivity" />
+        <activity android:name=".ViewPagerActivity" />
+        <activity android:name=".ExpandableActivity" />
+        <activity android:name=".MultiplyViewActivity" />
+        <activity android:name=".ChangeBgActivity" />
+        <activity android:name=".ScrollViewActivity" />
+        <activity android:name=".FilterActivity" />
+        <activity android:name=".AutoCompleteActivity" />
+        <activity android:name=".ClickableVpActivity" />
+        <activity android:name=".DateCustomDialogActivity" />
+        <activity android:name=".TempActivity" />
+        <activity android:name=".NotificationService.FCMActivity" />
+        <activity android:name=".Picker.NumberPickerActivity" />
+
+        <!-- <service android:name=".NotificationService.FirebaseMessagingService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- <service android:name=".NotificationService.FirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+        <activity android:name=".NotificationService.NoServerNotifiActivity" />
+        <activity android:name=".ServiceBind.ServiceBindActivity" />
+
+        <service android:name=".ServiceBind.MyService" />
+
+        <activity android:name=".GridView.ActivityGridView" />
+        <activity android:name=".TakePicture.ActivityTakePicture" />
+        <activity android:name=".Picker.ActivityCustomPicker" />
+        <activity android:name=".Popup.ActivityPopupColum" />
+        <activity android:name=".SplashImage.SplashActivity" />
+        <activity android:name=".TreeView.TreeViewActivity" />
+        <activity android:name=".TreeView.TreeView2Activity" />
+        <activity android:name=".TreeView.SingleFragmentActivity"></activity>
+    </application>
+
+</manifest>

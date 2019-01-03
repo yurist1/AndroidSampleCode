@@ -1,0 +1,158 @@
+<!-- MENU Start -->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:layout_marginEnd="47sp"
+    android:background="@color/colorMenuBackColor"
+    android:orientation="vertical">
+
+    <!-- 로그인 사용자 정보 영역 -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_main_menu_user_area"
+        android:layout_width="match_parent"
+        android:layout_height="113sp"
+        android:layout_gravity="start"
+        android:background="@color/colorMenuUserAreaBackColor"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 사용자 명 -->
+        <com.example.gbkim.gubonny.CustomControl.NotoTextViewBold
+            android:id="@+id/lb_menu_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:text="name"
+            android:textColor="@color/colorMenuUserAreaTextUserName"
+            android:textSize="@dimen/fontSize_21_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 사용자 소속 -->
+        <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+            android:id="@+id/lb_menu_user_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="dept"
+            android:textColor="@color/colorMenuUserAreaTextUserName"
+            android:textSize="@dimen/fontSize_15_dip"
+            app:layout_constraintStart_toStartOf="@+id/lb_menu_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/lb_menu_user_name" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- 메뉴 리스트 -->
+    <ListView
+        android:id="@+id/lv_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorMenuBottomAreaBackColor"
+        app:layout_constraintBottom_toTopOf="@+id/ly_menu_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_main_menu_user_area" />
+
+    <!-- 하단 버튼 영역 -->
+    <LinearLayout
+        android:id="@+id/ly_menu_bottom"
+        android:layout_width="0dp"
+        android:layout_height="45sp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- 오른쪽 버튼 영역 -->
+        <LinearLayout
+            android:id="@+id/btn_menu_settings"
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="10"
+            android:background="@drawable/button_menu_area_bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 이미지 -->
+            <ImageView
+                android:layout_width="17sp"
+                android:layout_height="20sp"
+                android:src="@drawable/button_menu_settings" />
+
+            <!-- 텍스트 -->
+            <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="@string/header_btn_settings"
+                android:textColor="@color/colorMenuBottomAreaButtonText"
+                android:textSize="@dimen/fontSize_15_dip" />
+        </LinearLayout>
+
+        <!-- 구분자 -->
+        <LinearLayout
+            android:layout_width="1sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:background="@color/colorMenuBottomAreaSplitter"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <!-- 가운데 버튼 -->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:drawableStart="@drawable/fingerprint_scanner_20"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="설정" />
+
+        <!-- 구분자 -->
+        <LinearLayout
+            android:layout_width="1sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:background="@color/colorMenuBottomAreaSplitter"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <!-- 오른쪽 버튼 영역 -->
+        <LinearLayout
+            android:id="@+id/btn_menu_logout"
+            android:layout_width="1sp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@drawable/button_menu_area_bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 이미지 -->
+            <ImageView
+                android:layout_width="17sp"
+                android:layout_height="20sp"
+                android:src="@drawable/button_menu_logout" />
+
+            <!-- 텍스트 -->
+            <com.example.gbkim.gubonny.CustomControl.NotoTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="10sp"
+                android:paddingStart="10sp"
+                android:text="@string/header_btn_logout"
+                android:textColor="@color/colorMenuBottomAreaButtonText"
+                android:textSize="@dimen/fontSize_15_sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
