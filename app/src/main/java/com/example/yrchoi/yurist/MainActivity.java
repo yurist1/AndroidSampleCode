@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put(" - CardView", CardViewActivity.class);
         menuActs.put(" - ChangeBackground", ChangeBgActivity.class);
         menuActs.put(" - Filter", FilterActivity.class);
+        menuActs.put(" - Drag&Drop ListView", DragNDropListViewActivity.class);
         menuActs.put("JavaCode UI", JavaLayoutActivity.class);
         menuActs.put("ListView", ListActivity.class);
         menuActs.put(" - LvItemSelect", LvItemSelectActivity.class);
