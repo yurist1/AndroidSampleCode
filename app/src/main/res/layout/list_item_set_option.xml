@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/set_option_item"
+        android:layout_height="53dp"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/list_option_click_zone"
+            android:layout_width="330dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/list_option_check_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="14dp"
+                android:src="@drawable/ic_txt_del_press"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/list_option_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/list_option_check_img"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/list_option_locate_img"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_menu_normal_bk"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dbdbdb"/>
+
+</android.support.constraint.ConstraintLayout>
