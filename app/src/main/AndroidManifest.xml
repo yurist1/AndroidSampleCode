@@ -80,7 +80,8 @@
         <activity android:name=".SplashImage.SplashActivity" />
         <activity android:name=".TreeView.TreeViewActivity" />
         <activity android:name=".TreeView.TreeView2Activity" />
-        <activity android:name=".TreeView.SingleFragmentActivity"></activity>
+        <activity android:name=".TreeView.SingleFragmentActivity"/>
+        <activity android:name=".DragNDropListViewActivity"/>
     </application>
 
 </manifest>

@@ -29,7 +29,7 @@ public class DragNDropListViewActivity extends AppCompatActivity {
 
         RecyclerView main_menu_listView= findViewById(R.id.lv_menu_set_option_main_menu);
 
-
+        mainMenu_list = new ArrayList<>();
         MainMenu menu1 = new MainMenu("초콜릿","1","Y","M");
         mainMenu_list.add(menu1);
         MainMenu menu2 = new MainMenu("사탕","2","Y","M");
