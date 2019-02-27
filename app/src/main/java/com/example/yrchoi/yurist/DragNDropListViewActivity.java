@@ -15,10 +15,10 @@ import com.example.yrchoi.yurist.Interface.OnStartDragListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DragNDropListViewActivity extends AppCompatActivity {
+public class DragNDropListViewActivity extends AppCompatActivity implements OnStartDragListener {
     private Adapter_dragAndDrop mAdapter;
     private ItemTouchHelper mItemTouchHelper;
-    private List<ItemModel> list;
+    private static List<ItemModel> list;
     private static ArrayList<MainMenu> mainMenu_list;
     private  ArrayList<ArrayList> list_order;
 
@@ -43,6 +43,12 @@ public class DragNDropListViewActivity extends AppCompatActivity {
         MainMenu menu6 = new MainMenu("얼그레이","6","Y","M");
         mainMenu_list.add(menu6);
 
+        list = new ArrayList<>();
+        for (int i = 0; i < mainMenu_list.size(); i++) {
+            ItemModel list_item = new ItemModel(mainMenu_list.get(i).getScreen_Menu_Name(), mainMenu_list.get(i).getScreen_Active_YN(), i);
+            list.add(list_item);
+        }
+
         main_menu_listView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new Adapter_dragAndDrop(this, list, (OnStartDragListener) this,mainMenu_list, "M");
         ItemTouchHelper.Callback callback =
@@ -54,4 +60,8 @@ public class DragNDropListViewActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onStartDrag(RecyclerView.ViewHolder viewHolder) {
+        mItemTouchHelper.startDrag(viewHolder);
+    }
 }

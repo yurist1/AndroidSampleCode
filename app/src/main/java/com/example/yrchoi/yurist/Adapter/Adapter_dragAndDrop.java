@@ -28,7 +28,7 @@ import java.util.List;
 
 public class Adapter_dragAndDrop extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements ItemTouchHelperAdapter {
 
-    private List<ItemModel> mMenuList;
+    private static List<ItemModel> mMenuList;
     OnItemClickListener mItemClickListener;
     private static final int TYPE_ITEM = 0;
     private final LayoutInflater mInflater;
@@ -87,26 +87,40 @@ public class Adapter_dragAndDrop extends RecyclerView.Adapter<RecyclerView.ViewH
             }
 
 
-            ((VHItem) viewHolder).click_zone.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    final ImageView check_img = (ImageView) v.findViewById(R.id.list_option_check_img);
+            ((VHItem) viewHolder).click_zone.setOnTouchListener((v, event) -> {
+                final ImageView check_img = (ImageView) v.findViewById(R.id.list_option_check_img);
 
-                    int cnt=0;
-                    for(ItemModel itemModel : mMenuList){
-                        if(itemModel.getChecked().equals("Y")){
-                            cnt++;
-                        }
+                int cnt=0;
+                for(ItemModel itemModel : mMenuList){
+                    if(itemModel.getChecked().equals("Y")){
+                        cnt++;
                     }
-                    return false;
                 }
+
+                for(int j =0 ; j< mMenuList.size() ; j++){
+                    if(mMenuList.get(j).getList_position() == i){
+                        //클릭한게 활성화 "Y"이고
+                        if (mMenuList.get(j).getChecked().equals("Y")) {
+                                //2개 이상일 때 img 바꿔줌
+                                check_img.setImageResource(R.drawable.ic_txt_del_press_bk);
+                                mMenuList.get(j).setChecked("N");
+
+                        } else {
+                            //이미지 바꿔줌
+                            check_img.setImageResource(R.drawable.ic_txt_del_press);
+                            mMenuList.get(j).setChecked("Y");
+                        }
+                        break;
+                    }
+                }
+                return false;
             });
 
 
             if (mMenuList.get(i).getChecked().equals("N")) {
-                ((VHItem) viewHolder).imageView.setImageResource(R.drawable.ic_txt_del_press);
-            } else {
                 ((VHItem) viewHolder).imageView.setImageResource(R.drawable.ic_txt_del_press_bk);
+            } else {
+                ((VHItem) viewHolder).imageView.setImageResource(R.drawable.ic_txt_del_press);
             }
 
             ((VHItem) viewHolder).image_menu.setOnTouchListener(new View.OnTouchListener() {
