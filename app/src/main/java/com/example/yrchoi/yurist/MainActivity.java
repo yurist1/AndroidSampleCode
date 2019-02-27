@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put("JavaCode UI", JavaLayoutActivity.class);
         menuActs.put("ListView", ListActivity.class);
         menuActs.put(" - LvItemSelect", LvItemSelectActivity.class);
+        menuActs.put(" - SwipeListView", SwipeListViewActivity.class);
         menuActs.put("Event", EventBasicActivity.class);
         menuActs.put(" - MotionEvent", MotionEventActivity.class);
         menuActs.put("Receiver", ReceiverActivity.class);

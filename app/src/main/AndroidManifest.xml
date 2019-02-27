@@ -82,6 +82,7 @@
         <activity android:name=".TreeView.TreeView2Activity" />
         <activity android:name=".TreeView.SingleFragmentActivity"/>
         <activity android:name=".DragNDropListViewActivity"/>
+        <activity android:name=".SwipeListViewActivity"/>
     </application>
 
 </manifest>
