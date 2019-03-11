@@ -83,6 +83,7 @@
         <activity android:name=".TreeView.SingleFragmentActivity"/>
         <activity android:name=".DragNDropListViewActivity"/>
         <activity android:name=".SwipeListViewActivity"/>
+        <activity android:name=".SlidingUpPanelActivity"/>
     </application>
 
 </manifest>

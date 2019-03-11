@@ -540,4 +540,13 @@
     <string name="ic_wifi_tethering">&#xe1af;</string>
     <string name="ic_work">&#xe1b0;</string>
 
+
+<!--sliding panel test-->
+    <string name="hello"><![CDATA[<b>The Awesome Sliding Up Panel</b>]]></string>
+    <string name="follow"><![CDATA[Follow us<br/>on <a href="https://blog.naver.com/id_for_blog0858">Blog</a>]]></string>
+    <string name="action_hide">Hide Panel</string>
+    <string name="action_show">Show Panel</string>
+    <string name="action_anchor_enable">Enable Anchor Point</string>
+    <string name="action_anchor_disable">Disable Anchor Point</string>
+
 </resources>
