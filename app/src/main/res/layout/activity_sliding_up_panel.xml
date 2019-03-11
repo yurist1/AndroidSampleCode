@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="bottom"
-    sothree:umanoPanelHeight="68dp"
+    sothree:umanoPanelHeight="100dp"
     sothree:umanoShadowHeight="4dp"
     sothree:umanoParallaxOffset="100dp"
     sothree:umanoDragView="@+id/dragView"
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
+      <!--  <TextView
             android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -28,7 +28,13 @@
             android:clickable="true"
             android:focusable="false"
             android:focusableInTouchMode="true"
-            android:textSize="16sp" />
+            android:textSize="16sp" />-->
+        <ListView
+            android:id="@+id/main_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:gravity="center"/>
     </FrameLayout>
 
     <!-- SLIDING LAYOUT -->

@@ -1,20 +1,26 @@
 package com.example.yrchoi.yurist;
 
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.SlidingPaneLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +34,7 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
     private static final String TAG = "DemoActivity";
 
     private SlidingUpPanelLayout mLayout;
+    private static ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +42,26 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sliding_up_panel);
 
 //        setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
+        //main view
+        ListView main_lv = (ListView) findViewById(R.id.main_listView);
+        ListViewAdapter lv_adater = new ListViewAdapter();
+        main_lv.setAdapter(lv_adater);
 
-        ListView lv = (ListView) findViewById(R.id.list);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lv = (ListView) findViewById(R.id.list);
+        main_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "onItemClick", Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String clicked_item = adapterView.getAdapter().getItem(i).toString();
+                List<String> your_array_list = Arrays.asList(
+                        clicked_item,
+                        clicked_item,
+                        clicked_item,
+                        clicked_item,
+                        clicked_item
+                );
+
+               setAdapter(your_array_list);
+
             }
         });
 
@@ -115,6 +136,16 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         });
     }
 
+    private void setAdapter(List<String> your_array_list) {
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                your_array_list );
+
+        lv.setAdapter(arrayAdapter);
+        lv.deferNotifyDataSetChanged();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -175,6 +206,61 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
             mLayout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    class ListViewAdapter extends BaseAdapter{
+        List<String> your_array_list = Arrays.asList(
+                "This",
+                "Is",
+                "An",
+                "Example",
+                "ListView",
+                "That",
+                "You",
+                "Can",
+                "Scroll",
+                ".",
+                "It",
+                "Shows",
+                "How",
+                "Any",
+                "Scrollable",
+                "View",
+                "Can",
+                "Be",
+                "Included",
+                "As",
+                "A",
+                "Child",
+                "Of",
+                "SlidingUpPanelLayout"
+        );
+
+        @Override
+        public int getCount() {
+            return your_array_list.size();
+        }
+
+        @Override
+        public Object getItem(int i) {
+            return your_array_list.get(i);
+        }
+
+        @Override
+        public long getItemId(int i) {
+            return i;
+        }
+
+        @Override
+        public View getView(int position, View view, ViewGroup viewGroup) {
+            if (view == null) {
+                view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.list_item_swipe, null);
+                TextView tv_gv_list_item = view.findViewById(R.id.textView);
+                tv_gv_list_item.setText(your_array_list.get(position));
+            }
+
+            return view;
         }
     }
 }
