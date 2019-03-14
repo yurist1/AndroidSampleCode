@@ -1,69 +1,104 @@
 package com.example.yrchoi.yurist;
 
 import android.content.Intent;
-import android.database.DataSetObserver;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.widget.SlidingPaneLayout;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.yrchoi.yurist.SlidingUpPanel.FragmentCalendar;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
-
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+
 
 public class SlidingUpPanelActivity extends AppCompatActivity {
     private static final String TAG = "DemoActivity";
 
     private SlidingUpPanelLayout mLayout;
     private static ListView lv;
+    private static Calendar calendar;
+    private CalendarItem[] days;
+    private static TextView tv_month;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding_up_panel);
 
-//        setSupportActionBar((Toolbar) findViewById(R.id.main_toolbar));
-        //main view
-        ListView main_lv = (ListView) findViewById(R.id.main_listView);
-        ListViewAdapter lv_adater = new ListViewAdapter();
-        main_lv.setAdapter(lv_adater);
+        calendar = Calendar.getInstance();
+        tv_month = findViewById(R.id.tv_month);
+        viewPager = findViewById(R.id.main_viewpager);
+        lv = findViewById(R.id.list);
 
-        lv = (ListView) findViewById(R.id.list);
-        main_lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        getMonthlyDate(0);
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(1000);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            float current_page = 1000;
+            float change_page = 1000;
+
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String clicked_item = adapterView.getAdapter().getItem(i).toString();
-                List<String> your_array_list = Arrays.asList(
-                        clicked_item,
-                        clicked_item,
-                        clicked_item,
-                        clicked_item,
-                        clicked_item
-                );
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if (position == 0) {
 
-               setAdapter(your_array_list);
+                    current_page = positionOffset;
 
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                change_page = position;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+                if (state == 0) {
+                    int move_n_page = (int)(change_page - current_page);
+                    getMonthlyDate(move_n_page);
+                    pagerAdapter.notifyDataSetChanged();
+//                    if (current_page < change_page) {
+//                        Log.d("check", "scrolling left ...");
+//                        getMonthlyDate(1);
+//                        pagerAdapter.notifyDataSetChanged();
+//                    } else {
+//                        Log.d("check", "scrolling right ...");
+//                        getMonthlyDate(-1);
+//                        pagerAdapter.notifyDataSetChanged();
+//                    }
+
+                    current_page = change_page;
+
+                }
             }
         });
+
 
         List<String> your_array_list = Arrays.asList(
                 "This",
@@ -98,7 +133,7 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
-                your_array_list );
+                your_array_list);
 
         lv.setAdapter(arrayAdapter);
 
@@ -136,14 +171,45 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         });
     }
 
-    private void setAdapter(List<String> your_array_list) {
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                your_array_list );
 
-        lv.setAdapter(arrayAdapter);
-        lv.deferNotifyDataSetChanged();
+    private void getMonthlyDate(int direction){
+
+        calendar.set(Calendar.DAY_OF_MONTH ,1);
+
+        calendar.add(Calendar.MONTH,direction);
+
+      /*  //다음 한달
+        if(direction == 1){
+            calendar.add(Calendar.MONTH,1);
+        //이전 한달
+        } else if(direction == -1){
+            calendar.add(Calendar.MONTH,-1);
+        }*/
+
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH );
+        int firstDayOfMonth = calendar.get(Calendar.DAY_OF_WEEK);
+        int lastDayOfMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+        int blank;
+        int day_of_week = firstDayOfMonth;
+        blank = firstDayOfMonth - 1;
+        tv_month.setText(year+"년 "+(month+1)+"월");
+        if ((lastDayOfMonth + blank) > 35)
+            days = new CalendarItem[42];
+        else
+            days = new CalendarItem[35];
+
+        for (int day = 1, position = blank; position < (lastDayOfMonth + blank); position++) {
+            if (position < days.length) {
+                if (day_of_week == 7) {
+                    days[position] = new CalendarItem(year, month, day++, day_of_week);
+                    day_of_week = 1;
+                } else {
+                    days[position] = new CalendarItem(year, month, day++, day_of_week++);
+                }
+            }
+        }
+
     }
 
     @Override
@@ -168,7 +234,7 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_toggle: {
                 if (mLayout != null) {
                     if (mLayout.getPanelState() != SlidingUpPanelLayout.PanelState.HIDDEN) {
@@ -209,7 +275,7 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         }
     }
 
-    class ListViewAdapter extends BaseAdapter{
+    class ListViewAdapter extends BaseAdapter {
         List<String> your_array_list = Arrays.asList(
                 "This",
                 "Is",
@@ -261,6 +327,64 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
             }
 
             return view;
+        }
+    }
+
+    public class PagerAdapter extends FragmentStatePagerAdapter {
+
+
+        @Override
+        public int getItemPosition(@NonNull Object object) {
+//            return super.getItemPosition(object);
+            return POSITION_NONE;
+        }
+
+        public PagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int frag_position) {
+            Fragment calendar = new FragmentCalendar().newInstance(days);
+
+            return calendar;
+        }
+
+        @Override
+        public int getCount() {
+            return Integer.MAX_VALUE;
+        }
+
+    }
+
+    public static class CalendarItem {
+        public int year;
+        public int month;
+        public int day;
+        public int day_of_week;
+        public String text;
+        public long id;
+
+        public CalendarItem(Calendar calendar) {
+            this(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.DAY_OF_WEEK));
+        }
+
+        public CalendarItem(int year, int month, int day, int day_of_week) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+            this.day_of_week = day_of_week;
+            this.text = String.valueOf(day);
+            this.id = Long.valueOf(year + "" + month + "" + day);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (o != null && o instanceof CalendarItem) {
+                final CalendarItem item = (CalendarItem)o;
+                return item.year == year && item.month == month && item.day == day;
+            }
+            return false;
         }
     }
 }

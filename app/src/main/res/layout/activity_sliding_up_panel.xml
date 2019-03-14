@@ -18,23 +18,82 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-      <!--  <TextView
-            android:id="@+id/main"
+        <TextView
+            android:id="@+id/tv_month"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
             android:gravity="center"
             android:text="Main Content"
             android:clickable="true"
-            android:focusable="false"
-            android:focusableInTouchMode="true"
-            android:textSize="16sp" />-->
-        <ListView
-            android:id="@+id/main_listView"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_height="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp"
+            android:weightSum="7">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="일"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="월"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="화"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="수"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="목"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="금"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="토"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="?attr/actionBarSize"
             android:gravity="center"/>
+       <!-- <ListView
+            android:id="@+id/main_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:gravity="center"/>-->
     </FrameLayout>
 
     <!-- SLIDING LAYOUT -->
