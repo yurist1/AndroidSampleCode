@@ -3,7 +3,6 @@ package com.example.yrchoi.yurist.SlidingUpPanel;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +11,9 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.yrchoi.yurist.R;
 import com.example.yrchoi.yurist.SlidingUpPanelActivity;
-
-import org.w3c.dom.Text;
-
 import java.util.Calendar;
-import java.util.zip.Inflater;
 
 
 public class FragmentCalendar extends Fragment {
@@ -28,6 +21,7 @@ public class FragmentCalendar extends Fragment {
     //선택 된것에 대한 날짜
     private static SlidingUpPanelActivity.CalendarItem selected_date = new SlidingUpPanelActivity.CalendarItem(Calendar.getInstance());;
     private static GridViewAdatper gridadatper;
+    private GridView grid;
 
     public FragmentCalendar newInstance(SlidingUpPanelActivity.CalendarItem[] days) {
         this.days_of_month = days;
@@ -39,7 +33,7 @@ public class FragmentCalendar extends Fragment {
 
         View view = LayoutInflater.from(getContext()).inflate(R.layout.layout_calendar,null);
 
-        GridView grid = view.findViewById(R.id.grid_calendar);
+        grid = view.findViewById(R.id.grid_calendar);
          gridadatper = new GridViewAdatper();
 
 
@@ -98,10 +92,9 @@ public class FragmentCalendar extends Fragment {
 
             } else {
                 if((String.valueOf(currentItem.day)).equals(String.valueOf(selected_date.day))){
-                    textView_date.setTextColor(Color.BLUE);
-                    Toast.makeText(getContext(),currentItem.day +"일" , Toast.LENGTH_SHORT).show();
+                    view.setBackgroundColor(Color.parseColor("#FF9AD082"));
                 } else {
-                    textView_date.setTextColor(Color.BLACK);
+                    view.setBackgroundColor(Color.WHITE);
                 }
             }
 
@@ -111,11 +104,11 @@ public class FragmentCalendar extends Fragment {
             return view;
         }
 
-        public final void setSelected(int year, int month, int day) {
+        public final void setSelected(int year, int month, int day, String text) {
             selected_date.year = year;
             selected_date.month = month;
             selected_date.day = day;
-            notifyDataSetChanged();
+            selected_date.text = text;
         }
     }
 
@@ -124,10 +117,13 @@ public class FragmentCalendar extends Fragment {
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             Log.d("choi",""+i);
             SlidingUpPanelActivity.CalendarItem item = (SlidingUpPanelActivity.CalendarItem) ((GridView) adapterView).getAdapter().getItem(i);
-            gridadatper.setSelected(item.year, item.month, item.day);
+            gridadatper.setSelected(item.year, item.month, item.day, item.text);
 
 
 
+            gridadatper = new GridViewAdatper();
+            grid.setAdapter(gridadatper);
+            gridadatper.notifyDataSetChanged();
         }
     }
 
