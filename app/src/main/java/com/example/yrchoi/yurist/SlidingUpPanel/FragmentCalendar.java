@@ -92,9 +92,15 @@ public class FragmentCalendar extends Fragment {
 
             } else {
                 if((String.valueOf(currentItem.day)).equals(String.valueOf(selected_date.day))){
-                    view.setBackgroundColor(Color.parseColor("#FF9AD082"));
+                    view.setBackgroundColor(Color.parseColor("#29a2f9"));
+                    textView_am.setTextColor(Color.WHITE);
+                    textView_pm.setTextColor(Color.WHITE);
+                    textView_date.setTextColor(Color.WHITE);
                 } else {
                     view.setBackgroundColor(Color.WHITE);
+                    textView_am.setTextColor(Color.BLACK);
+                    textView_pm.setTextColor(Color.BLACK);
+                    textView_date.setTextColor(Color.BLACK);
                 }
             }
 
@@ -119,11 +125,20 @@ public class FragmentCalendar extends Fragment {
             SlidingUpPanelActivity.CalendarItem item = (SlidingUpPanelActivity.CalendarItem) ((GridView) adapterView).getAdapter().getItem(i);
             gridadatper.setSelected(item.year, item.month, item.day, item.text);
 
-
-
             gridadatper = new GridViewAdatper();
             grid.setAdapter(gridadatper);
             gridadatper.notifyDataSetChanged();
+
+            //리스트 바꾸기 위해 정보 fragment에 전달
+            ((SlidingUpPanelActivity)getActivity()).setOnCallback(new SlidingUpPanelActivity.Callback() {
+                @Override
+                public int onCallback() {
+                    int day = item.day;
+
+                    return day;
+                }
+            });
+
         }
     }
 

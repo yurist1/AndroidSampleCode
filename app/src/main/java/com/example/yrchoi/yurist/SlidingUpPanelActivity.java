@@ -3,6 +3,7 @@ package com.example.yrchoi.yurist;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,7 +17,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.yrchoi.yurist.SlidingUpPanel.FragmentCalendar;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
@@ -40,8 +41,25 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
     private static Calendar calendar;
     private CalendarItem[] days;
     private static TextView tv_month;
+    private static TextView tv_title;
     private ViewPager viewPager;
 
+    //callback practice
+    private Callback callback;
+
+    public interface Callback{
+        public int onCallback();
+    }
+
+    public void setOnCallback(Callback oCallback){
+        this.callback = oCallback;
+        //리스트 만들기
+        Toast.makeText(getApplicationContext(), ""+callback.onCallback(), Toast.LENGTH_SHORT).show();
+
+        tv_title.setText(callback.onCallback() + "일 환자 스케줄");
+        ListViewAdapter listViewAdapter = new ListViewAdapter();
+        lv.setAdapter(listViewAdapter);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +69,8 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         tv_month = findViewById(R.id.tv_month);
         viewPager = findViewById(R.id.main_viewpager);
         lv = findViewById(R.id.list);
+        tv_title = findViewById(R.id.tv_title);
+
 
         getMonthlyDate(0);
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
@@ -83,21 +103,13 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
                     int move_n_page = (int)(change_page - current_page);
                     getMonthlyDate(move_n_page);
                     pagerAdapter.notifyDataSetChanged();
-//                    if (current_page < change_page) {
-//                        Log.d("check", "scrolling left ...");
-//                        getMonthlyDate(1);
-//                        pagerAdapter.notifyDataSetChanged();
-//                    } else {
-//                        Log.d("check", "scrolling right ...");
-//                        getMonthlyDate(-1);
-//                        pagerAdapter.notifyDataSetChanged();
-//                    }
-
                     current_page = change_page;
 
                 }
             }
         });
+
+
 
 
         List<String> your_array_list = Arrays.asList(
@@ -156,20 +168,22 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
             }
         });
 
-        TextView t = (TextView) findViewById(R.id.name);
-        t.setText(Html.fromHtml(getString(R.string.hello)));
-        Button f = (Button) findViewById(R.id.follow);
-        f.setText(Html.fromHtml(getString(R.string.follow)));
-        f.setMovementMethod(LinkMovementMethod.getInstance());
-        f.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("http://www.twitter.com/umanoapp"));
-                startActivity(i);
-            }
-        });
+//        TextView t = (TextView) findViewById(R.id.name);
+//        t.setText(Html.fromHtml(getString(R.string.hello)));
+//        Button f = (Button) findViewById(R.id.follow);
+//        f.setText(Html.fromHtml(getString(R.string.follow)));
+//        f.setMovementMethod(LinkMovementMethod.getInstance());
+//        f.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Intent.ACTION_VIEW);
+//                i.setData(Uri.parse("http://www.twitter.com/umanoapp"));
+//                startActivity(i);
+//            }
+//        });
     }
+
+
 
 
     private void getMonthlyDate(int direction){
@@ -177,14 +191,6 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         calendar.set(Calendar.DAY_OF_MONTH ,1);
 
         calendar.add(Calendar.MONTH,direction);
-
-      /*  //다음 한달
-        if(direction == 1){
-            calendar.add(Calendar.MONTH,1);
-        //이전 한달
-        } else if(direction == -1){
-            calendar.add(Calendar.MONTH,-1);
-        }*/
 
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH );
@@ -211,6 +217,8 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
         }
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -276,31 +284,14 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
     }
 
     class ListViewAdapter extends BaseAdapter {
+
         List<String> your_array_list = Arrays.asList(
                 "This",
-                "Is",
-                "An",
-                "Example",
-                "ListView",
-                "That",
-                "You",
-                "Can",
-                "Scroll",
-                ".",
-                "It",
-                "Shows",
-                "How",
-                "Any",
-                "Scrollable",
-                "View",
-                "Can",
-                "Be",
-                "Included",
-                "As",
-                "A",
-                "Child",
-                "Of",
-                "SlidingUpPanelLayout"
+                "This",
+                "This",
+                "This",
+                "This",
+                "This"
         );
 
         @Override
