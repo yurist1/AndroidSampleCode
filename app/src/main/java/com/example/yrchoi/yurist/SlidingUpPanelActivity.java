@@ -48,15 +48,15 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
     private Callback callback;
 
     public interface Callback{
-        public int onCallback();
+        public CalendarItem onCallback();
     }
 
     public void setOnCallback(Callback oCallback){
         this.callback = oCallback;
         //리스트 만들기
-        Toast.makeText(getApplicationContext(), ""+callback.onCallback(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), ""+callback.onCallback().text, Toast.LENGTH_SHORT).show();
 
-        tv_title.setText(callback.onCallback() + "일 환자 스케줄");
+        tv_title.setText(callback.onCallback().text + "일 환자 스케줄");
         ListViewAdapter listViewAdapter = new ListViewAdapter();
         lv.setAdapter(listViewAdapter);
     }

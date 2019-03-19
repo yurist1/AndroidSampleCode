@@ -132,8 +132,8 @@ public class FragmentCalendar extends Fragment {
             //리스트 바꾸기 위해 정보 fragment에 전달
             ((SlidingUpPanelActivity)getActivity()).setOnCallback(new SlidingUpPanelActivity.Callback() {
                 @Override
-                public int onCallback() {
-                    int day = item.day;
+                public SlidingUpPanelActivity.CalendarItem onCallback() {
+                    SlidingUpPanelActivity.CalendarItem day = item;
 
                     return day;
                 }

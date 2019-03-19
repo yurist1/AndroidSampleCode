@@ -59,6 +59,26 @@ public class CardViewActivity extends AppCompatActivity {
         SubjectName.add("딸기");
         SubjectName.add("바나나");
         SubjectName.add("유자");
+        SubjectName.add("사과");
+        SubjectName.add("배");
+        SubjectName.add("딸기");
+        SubjectName.add("바나나");
+        SubjectName.add("유자");
+        SubjectName.add("사과");
+        SubjectName.add("배");
+        SubjectName.add("딸기");
+        SubjectName.add("바나나");
+        SubjectName.add("유자");
+        SubjectName.add("사과");
+        SubjectName.add("배");
+        SubjectName.add("딸기");
+        SubjectName.add("바나나");
+        SubjectName.add("유자");
+        SubjectName.add("사과");
+        SubjectName.add("배");
+        SubjectName.add("딸기");
+        SubjectName.add("바나나");
+        SubjectName.add("유자");
 
     }
 }
