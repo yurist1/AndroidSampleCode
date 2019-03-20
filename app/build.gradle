@@ -53,7 +53,8 @@ dependencies {
     implementation 'com.github.bmelnychuk:atv:1.2.+'
     implementation 'com.github.johnkil.print:print:1.2.+'
     implementation 'com.sothree.slidinguppanel:library:3.4.0'
-
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
 
 //apply plugin: 'com.google.gms.google-services'

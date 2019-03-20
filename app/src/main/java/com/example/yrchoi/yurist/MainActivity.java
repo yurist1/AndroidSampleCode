@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put(" - Tree View1", TreeViewActivity.class);
         menuActs.put(" - Tree View2", TreeView2Activity.class);
         menuActs.put("Sliding Up panel", SlidingUpPanelActivity.class);
+        menuActs.put("Preload", Preload.class);
 
     }
 

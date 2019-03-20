@@ -25,6 +25,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.ListPreloader;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.util.FixedPreloadSizeProvider;
 import com.example.yrchoi.yurist.SlidingUpPanel.FragmentCalendar;
 import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
@@ -64,6 +68,7 @@ public class SlidingUpPanelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding_up_panel);
+
 
         calendar = Calendar.getInstance();
         tv_month = findViewById(R.id.tv_month);

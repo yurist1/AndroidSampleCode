@@ -84,6 +84,10 @@
         <activity android:name=".DragNDropListViewActivity"/>
         <activity android:name=".SwipeListViewActivity"/>
         <activity android:name=".SlidingUpPanelActivity"/>
+        <activity android:name=".Preload"/>
     </application>
+
+    <!--인터넷 권한-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
