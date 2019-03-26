@@ -72,9 +72,11 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put("Notification", null);
         menuActs.put(" - No_Server_Notification", NoServerNotifiActivity.class);
         menuActs.put(" - FCMNotification", FCMActivity.class);
+        menuActs.put("Media", null);
+        menuActs.put(" - TakePicture", ActivityTakePicture.class);
+        menuActs.put(" - Recording Voice", RecordingVoice.class);
         menuActs.put("ServiceBind", ServiceBindActivity.class);
         menuActs.put("GridView", ActivityGridView.class);
-        menuActs.put("TakePicture", ActivityTakePicture.class);
         menuActs.put("Picker", NumberPickerActivity.class);
         menuActs.put("Splash Image", SplashActivity.class);
         menuActs.put("Tree View", null);
@@ -82,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put(" - Tree View2", TreeView2Activity.class);
         menuActs.put("Sliding Up panel", SlidingUpPanelActivity.class);
         menuActs.put("Preload", Preload.class);
+        menuActs.put("Load More(Scroll and load)", LoadMore.class);
 
     }
 

@@ -56,6 +56,8 @@
         <activity android:name=".TempActivity" />
         <activity android:name=".NotificationService.FCMActivity" />
         <activity android:name=".Picker.NumberPickerActivity" />
+        <activity android:name=".LoadMore" />
+        <activity android:name=".RecordingVoice" />
 
         <!-- <service android:name=".NotificationService.FirebaseMessagingService"> -->
         <!-- <intent-filter> -->
