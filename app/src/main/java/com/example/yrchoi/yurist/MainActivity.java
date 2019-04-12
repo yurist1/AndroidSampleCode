@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put("Sliding Up panel", SlidingUpPanelActivity.class);
         menuActs.put("Preload", Preload.class);
         menuActs.put("Load More(Scroll and load)", LoadMore.class);
+        menuActs.put("DrawerMenu", DrawerMenu.class);
+        menuActs.put("CoordinatorLayout", CoordiActivity.class);
 
     }
 

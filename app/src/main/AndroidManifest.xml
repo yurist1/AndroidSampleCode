@@ -91,6 +91,8 @@
         <activity android:name=".SwipeListViewActivity"/>
         <activity android:name=".SlidingUpPanelActivity"/>
         <activity android:name=".Preload"/>
+        <activity android:name=".DrawerMenu"/>
+        <activity android:name=".CoordiActivity"/>
     </application>
 
     <!--인터넷 권한-->
