@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
         menuActs.put("Load More(Scroll and load)", LoadMore.class);
         menuActs.put("DrawerMenu", DrawerMenu.class);
         menuActs.put("CoordinatorLayout", CoordiActivity.class);
+        menuActs.put("Google Graph", GoogleGraph.class);
+        menuActs.put("Webview interact", WebviewInter.class);
+
 
     }
 
